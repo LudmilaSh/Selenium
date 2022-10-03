@@ -45,4 +45,16 @@ public class SeleniumTest {
         String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void shouldBeSuccessWithDash() throws InterruptedException {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Петров-Васечкин Иван");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79999999999");
+        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button__text")).click();
+        String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
+        String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
+        assertEquals(expected, actual);
+    }
 }
