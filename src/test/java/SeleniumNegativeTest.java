@@ -34,9 +34,21 @@ public class SeleniumNegativeTest {
     }
 
     @Test
-    void shouldBeWrongName() throws InterruptedException {
+    void shouldBeLatinLettersName() throws InterruptedException {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("ghghcfcg");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79999999999");
+        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button__text")).click();
+        String expected = "Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.";
+        String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldBeSymbolsName() throws InterruptedException {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("+-{]/.,?>");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79999999999");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.className("button__text")).click();
@@ -58,10 +70,58 @@ public class SeleniumNegativeTest {
     }
 
     @Test
-    void shouldBeWrongPhone() throws InterruptedException {
+    void shouldBeWrongPhoneWithoutPlus() throws InterruptedException {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Толстой Лев");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("89999999999");
+        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button__text")).click();
+        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
+        String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldBeWrongPhoneTenDigits() throws InterruptedException {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Толстой Лев");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+7999999999");
+        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button__text")).click();
+        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
+        String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldBeWrongPhoneTwelveDigits() throws InterruptedException {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Толстой Лев");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79999999999");
+        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button__text")).click();
+        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
+        String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldBeWrongPhoneWithLetters() throws InterruptedException {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Толстой Лев");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+7dbgbfhnh");
+        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
+        driver.findElement(By.className("button__text")).click();
+        String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
+        String actual = driver.findElement(By.cssSelector(".input_invalid .input__sub")).getText().trim();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void shouldBeWrongPhoneWithSymbols() throws InterruptedException {
+        driver.get("http://localhost:9999/");
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Толстой Лев");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+-//..{]");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.className("button__text")).click();
         String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";

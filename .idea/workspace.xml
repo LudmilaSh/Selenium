@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92480925-6e3a-4788-a482-702836112e0d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumNegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SeleniumNegativeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +54,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.SeleniumNegativeTest">
-    <configuration name="SeleniumNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SeleniumNegativeTest.shouldBeWrongPhoneWithSymbols">
+    <configuration name="SeleniumNegativeTest.shouldBeWrongPhoneTenDigits" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -67,7 +68,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SeleniumNegativeTest&quot;" />
+            <option value="&quot;SeleniumNegativeTest.shouldBeWrongPhoneTenDigits&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -77,7 +78,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SeleniumNegativeTest.shouldBeWithoutCheckboxClick" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SeleniumNegativeTest.shouldBeWrongPhoneTwelveDigits" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -90,7 +91,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SeleniumNegativeTest.shouldBeWithoutCheckboxClick&quot;" />
+            <option value="&quot;SeleniumNegativeTest.shouldBeWrongPhoneTwelveDigits&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -100,7 +101,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SeleniumNegativeTest.shouldBeWithoutName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SeleniumNegativeTest.shouldBeWrongPhoneWithLetters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -113,7 +114,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SeleniumNegativeTest.shouldBeWithoutName&quot;" />
+            <option value="&quot;SeleniumNegativeTest.shouldBeWrongPhoneWithLetters&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -123,7 +124,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SeleniumNegativeTest.shouldBeWithoutPhone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SeleniumNegativeTest.shouldBeWrongPhoneWithSymbols" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +137,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SeleniumNegativeTest.shouldBeWithoutPhone&quot;" />
+            <option value="&quot;SeleniumNegativeTest.shouldBeWrongPhoneWithSymbols&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -146,7 +147,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SeleniumNegativeTest.shouldBeWrongName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SeleniumTest.shouldBeSuccessWithOneLetterInName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -159,7 +160,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SeleniumNegativeTest.shouldBeWrongName&quot;" />
+            <option value="&quot;SeleniumTest.shouldBeSuccessWithOneLetterInName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -171,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SeleniumNegativeTest" />
-        <item itemvalue="Gradle.SeleniumNegativeTest.shouldBeWithoutPhone" />
-        <item itemvalue="Gradle.SeleniumNegativeTest.shouldBeWithoutName" />
-        <item itemvalue="Gradle.SeleniumNegativeTest.shouldBeWithoutCheckboxClick" />
-        <item itemvalue="Gradle.SeleniumNegativeTest.shouldBeWrongName" />
+        <item itemvalue="Gradle.SeleniumNegativeTest.shouldBeWrongPhoneWithSymbols" />
+        <item itemvalue="Gradle.SeleniumNegativeTest.shouldBeWrongPhoneWithLetters" />
+        <item itemvalue="Gradle.SeleniumNegativeTest.shouldBeWrongPhoneTwelveDigits" />
+        <item itemvalue="Gradle.SeleniumNegativeTest.shouldBeWrongPhoneTenDigits" />
+        <item itemvalue="Gradle.SeleniumTest.shouldBeSuccessWithOneLetterInName" />
       </list>
     </recent_temporary>
   </component>
