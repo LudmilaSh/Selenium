@@ -97,7 +97,7 @@ public class SeleniumNegativeTest {
     void shouldBeWrongPhoneTwelveDigits() throws InterruptedException {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Толстой Лев");
-        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79999999999");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+799999999999");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.className("button__text")).click();
         String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.";
